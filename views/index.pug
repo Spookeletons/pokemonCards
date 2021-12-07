@@ -1,38 +1,7 @@
 extends layout
 
 block content
+  include mixins/pokemonCard
   div.card-area
     each card in cards
-      div.card(class=`${card.type}1`)
-        div.top
-          div.f=card.name
-          div.f.hitpoints
-            div=card.hp
-            div HP
-          div
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-        div.picture-area
-            img.pic(class=`${card.type}2`)(src=card.picture)
-        div.attack
-          div
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-          div.f=card.ati
-          div.f=card.atid
-        div.attack
-          div
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-          div.f=card.atii
-          div.f=card.atiid
-        div.special1
-          div.f weakness
-          div.f resistance
-          div.f retreat
-        div.special2
-          div
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-          div
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-          div
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-            img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
+      +pokemonCard(card)
