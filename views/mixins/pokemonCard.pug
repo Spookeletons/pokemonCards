@@ -12,13 +12,20 @@ mixin pokemonCard(card)
             img.pic(class=`${card.type}2`, src=card.picture)
         div.attack
             div
-                img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
+                img.energy(src=card.atie1)
+                if(card.atie2 !== '' && card.atie2 !== null)
+                    img.energy(src=card.atie2)
+                if(card.atie3 !== '' && card.atie3 !== null)
+                    img.energy(src=card.atie3)
             div.f=card.ati
             div.f=card.atid
         div.attack
             div
-                img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-                img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
+                img.energy(src=card.atiie1)
+                if(card.atiie2 !== '' && card.atiie2 !== null)
+                    img.energy(src=card.atiie2)
+                if(card.atiie3 !== '' && card.atiie3 !== null)
+                    img.energy(src=card.atiie3)
             div.f=card.atii
             div.f=card.atiid
         div.special1
@@ -26,10 +33,12 @@ mixin pokemonCard(card)
             div.f resistance
             div.f retreat
         div.special2
+            div(style='width:20px')
+                if(card.weakness !== '' && card.weakness !== null)
+                    img.energy(src=card.weakness)
             div
-                img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
+                if(card.resistance !== '' && card.resistance !== null)
+                    img.energy(src=card.resistance)
             div
-                img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-            div
-                img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
-                img.energy(src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png')
+                if(card.retreat !== '' && card.retreat !== null)
+                    img.energy(src=card.retreat)
