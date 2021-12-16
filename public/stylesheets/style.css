@@ -12,8 +12,8 @@ a {
 }
 .card {
   position:relative;
-  width:300px;
-  height:480px;
+  width:360px;
+  height:570px;
   border:6px solid;
   border-radius:10px;
   font-size:20px;
@@ -22,7 +22,7 @@ a {
   margin:40px;
 }
 .top {
-  width:300px;
+  width:360px;
   height:60px;
   display:flex;
 
@@ -32,15 +32,15 @@ a {
   display:flex;
 }
 .picture-area {
-  width:300px;
+  width:360px;
   height:225px;
   justify-content:center;
 }
 .pic {
   position:absolute;
-  left:46px;
-  width:200px;
-  height:200px;
+  left:51px;
+  width:250px;
+  height:250px;
   border:4px solid;
   box-shadow:0 2px 4px 0 rgba(50,50,50,0.5);
   background-color:white;
@@ -57,7 +57,7 @@ a {
 }
 .attack {
   display:flex;
-  width:300px;
+  width:360px;
   height:60px;
   border-bottom:2px solid black;
 }
@@ -76,114 +76,137 @@ a {
 .top, .attack, .special1, .special2 {
   justify-content:space-between;
 }
+.edit {
+  height:40px;
+}
+a, a:visited {
+  color:rgba(25, 0, 100, 1);
+}
 .normal1 {
-
+  background-color:rgba(200, 200, 200, 1);
+  border-color:rgba(170, 170, 170, 1);
 }
 .fire1 {
-
+  background-color:rgba(255, 151, 137, 1);
+  border-color:rgba(255, 69, 23, 1);
 }
 .water1 {
-
+  background-color:rgba(55, 203, 255, 1);
+  border-color:rgba(46, 131, 255, 1);
 }
 .grass1 {
-
+  background-color:rgba(120, 255, 120, 1);
+  border-color:rgba(50, 230, 100, 1);
 }
 .electric1 {
   background-color:rgba(254, 241, 96, 1);
   border-color:rgba(247, 202, 24, 1);
 }
 .ice1 {
-
+  background-color:rgba(110, 255, 255, 1);
+  border-color:rgba(100, 200, 200, 1);
 }
 .fighting1 {
-
+  background-color:rgba(255, 130, 159, 1);
+  border-color:rgba(255, 20, 80, 1);
 }
 .poison1 {
-
+  background-color:rgba(220, 120, 255, 1);
+  border-color:rgba(175, 0, 255, 1);
 }
 .ground1 {
-
+  background-color:rgba(255, 200, 100, 1);
+  border-color:rgba(225, 175, 0, 1);
 }
 .flying1 {
-
+  background-color:rgba(125, 175, 225, 1);
+  border-color:rgba(0, 155, 255, 1);
 }
 .psychic1 {
-
+  background-color:rgba(255, 175, 255, 1);
+  border-color:rgba(255, 0, 255, 1);
 }
 .bug1 {
-
+  background-color:rgba(201, 255, 66, 1);
+  border-color:rgba(141, 255, 0, 1);
 }
 .rock1 {
-
+  background-color:rgba(240, 240, 110, 1);
+  border-color:rgba(186, 186, 0, 1);
 }
 .ghost1 {
-
+  background-color: rgba(184, 142, 255, 1);
+  border-color:rgba(100, 0, 255, 1);
 }
 .dragon1 {
-
+  background-color:rgba(150, 200, 255, 1);
+  border-color:rgba(0, 125, 175, 1);
 }
 .dark1 {
-
+  background-color:rgba(225, 200, 175, 1);
+  border-color:rgba(0, 0, 0, 1);
 }
 .steel1 {
-
+  background-color:rgba(215, 200, 215, 1);
+  border-color:rgba(186, 175, 186, 1);
 }
 .fairy1 {
-
+  background-color:rgba(255, 100, 200, 1);
+  border-color:rgba(255, 0, 175, 1);
 }
 
 
-.normal1 {
-
+.normal2 {
+  border-color:rgba(170, 170, 170, 1);
 }
-.fire1 {
-
+.fire2 {
+  border-color:rgba(255, 69, 23, 1);
 }
-.water1 {
-
+.water2 {
+  border-color:rgba(46, 131, 255, 1);
 }
-.grass1 {
-
+.grass2 {
+  border-color:rgba(50, 230, 100, 1);
 }
 .electric2 {
   border-color:rgba(247, 202, 24, 1);
 }
-.ice1 {
-
+.ice2 {
+  border-color:rgba(100, 200, 200, 1);
 }
-.fighting1 {
-
+.fighting2 {
+  border-color:rgba(255, 20, 80, 1);
 }
-.poison1 {
-
+.poison2 {
+  border-color:rgba(175, 0, 255, 1);
 }
-.ground1 {
-
+.ground2 {
+  border-color:rgba(225, 175, 0, 1);
 }
-.flying1 {
-
+.flying2 {
+  border-color:rgba(0, 155, 255, 1);
 }
-.psychic1 {
-
+.psychic2 {
+  border-color:rgba(255, 0, 255, 1);
 }
-.bug1 {
-
+.bug2 {
+  border-color:rgba(141, 255, 0, 1);
 }
-.rock1 {
-
+.rock2 {
+  border-color:rgba(186, 186, 0, 1);
 }
-.ghost1 {
-
+.ghost2 {
+  border-color:rgba(100, 0, 255, 1);
 }
-.dragon1 {
-
+.dragon2 {
+  border-color:rgba(0, 125, 175, 1);
 }
-.dark1 {
-
+.dark2 {
+  border-color:rgba(0, 0, 0, 1);
 }
-.steel1 {
-
+.steel2 {
+  border-color:rgba(186, 175, 186, 1);
 }
-.fairy1 {
-
+.fairy2 {
+  border-color:rgba(255, 0, 175, 1);
 }

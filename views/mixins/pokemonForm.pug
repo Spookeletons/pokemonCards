@@ -1,0 +1,62 @@
+mixin pokemonForm(card, actionURL, mode, title)
+
+    div.form-panel
+        div.header
+            h1=title
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for=name) Name:
+                    input(type='text' id='name' name='name' value=card.name)
+                div.form-input
+                    label(for=type) Type:
+                    input(type='text' id='type' name='type' value=card.type)
+                div.form-input
+                    label(for=hp) HP:
+                    input(type='text' id='hp' name='hp' value=card.hp)
+                div.form-input
+                    label(for=picture) Picture URL:
+                    input(type='text' id='picture' name='picture' value=card.picture)
+                div.form-input
+                    label(for=ati) Attack one:
+                    input(type='text' id='ati' name='ati' value=card.ati)
+                div.form-input
+                    label(for=atid) Attack one damage:
+                    input(type='text' id='atid' name='atid' value=card.atid)
+                div.form-input
+                    label(for=atii) Attack two:
+                    input(type='text' id='atii' name='atii' value=card.atii)
+                div.form-input
+                    label(for=atiid) Attack two damage:
+                    input(type='text' id='atiid' name='atiid' value=card.atiid)
+                div.form-input
+                    label(for=atie1) Attack one first energy:
+                    input(type='text' id='atie1' name='atie1' value=card.atie1)
+                div.form-input
+                    label(for=atie2) Attack one second energy:
+                    input(type='text' id='atie2' name='atie2' value=card.atie2)
+                div.form-input
+                    label(for=atie3) Attack one third energy:
+                    input(type='text' id='atie3' name='atie3' value=card.atie3)
+                div.form-input
+                    label(for=atiie1) Attack two first energy:
+                    input(type='text' id='atiie1' name='atiie1' value=card.atiie1)
+                div.form-input
+                    label(for=atiie2) Attack two second energy:
+                    input(type='text' id='atiie2' name='atiie2' value=card.atiie2)
+                div.form-input
+                    label(for=atiie3) Attack two third energy:
+                    input(type='text' id='atiie3' name='atiie3' value=card.atiie3)
+                div.form-input
+                    label(for=weakness) Weakness:
+                    input(type='text' id='weakness' name='weakness' value=card.weakness)
+                div.form-input
+                    label(for=resistance) Resistance:
+                    input(type='text' id='resistance' name='resistance' value=card.resistance)
+                div.form-input
+                    label(for=retreat) Retreat cost:
+                    input(type='text' id='retreat' name='retreat' value=card.retreat)
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    if(mode==='edit')
+                        a.button.delete(href=`/delete/${card.id}`) Delete
+                    button.button.save(type='submit') Submit

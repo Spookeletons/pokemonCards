@@ -3,7 +3,7 @@ module.exports.viewAll = async function(req, res, next) {
         const cards = await Pokemon.findAll();
         for(let i=0;i<cards.length;i++){
             let card = cards[i];
-            card.typeEnergy=geturl(card.energy);
+            card.typeEnergy=geturl(card.type);
             card.atie1=geturl(card.atie1);
             card.atie2=geturl(card.atie2);
             card.atie3=geturl(card.atie3);
@@ -16,6 +16,100 @@ module.exports.viewAll = async function(req, res, next) {
         }
         res.render('index', {cards});
 }
+module.exports.renderEditForm = async function(req, res, next){
+    const card = await Pokemon.findByPk(
+        req.params.id
+    );
+    res.render('edit', {card});
+}
+module.exports.updatePokemon = async function(req, res, next){
+    await Pokemon.update(
+        {
+            name: req.body.name,
+            type: req.body.type,
+            hp: req.body.hp,
+            picture: req.body.picture,
+            ati: req.body.ati,
+            atid: req.body.atid,
+            atii: req.body.atii,
+            atiid: req.body.atiid,
+            atie1: req.body.atie1,
+            atie2: req.body.atie2,
+            atie3: req.body.atie3,
+            atiie1: req.body.atiie1,
+            atiie2: req.body.atiie2,
+            atiie3: req.body.atiie3,
+            weakness: req.body.weakness,
+            resistance: req.body.resistance,
+            retreat: req.body.retreat,
+        },
+        {
+            where:
+                {
+                    id: req.params.id
+                }
+        });
+    res.redirect('/');
+}
+module.exports.deletePokemon = async function(req, res, next){
+    await Pokemon.destroy(
+        {
+            where:
+                {
+                    id: req.params.id
+                }
+        });
+    res.redirect('/');
+}
+module.exports.renderAddForm = async function(req, res){
+    const card = {
+        name: "",
+        type: "",
+        hp: 100,
+        picture: "",
+        ati: "",
+        atid: 10,
+        atii: "",
+        atiid: 30,
+        atie1: "",
+        atie2: "",
+        atie3: "",
+        atiie1: "",
+        atiie2: "",
+        atiie3: "",
+        weakness: "",
+        resistance: "",
+        retreat: "",
+    };
+    res.render('add', {card});
+}
+module.exports.addPokemon = async function(req, res) {
+    await Pokemon.create(
+        {
+            name: req.body.name,
+            type: req.body.type,
+            hp: req.body.hp,
+            picture: req.body.picture,
+            ati: req.body.ati,
+            atid: req.body.atid,
+            atii: req.body.atii,
+            atiid: req.body.atiid,
+            atie1: req.body.atie1,
+            atie2: req.body.atie2,
+            atie3: req.body.atie3,
+            atiie1: req.body.atiie1,
+            atiie2: req.body.atiie2,
+            atiie3: req.body.atiie3,
+            weakness: req.body.weakness,
+            resistance: req.body.resistance,
+            retreat: req.body.retreat,
+        });
+    res.redirect('/');
+}
+
+
+
+
 function geturl(energy){
     if(energy==='electric'){
         return 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/1024px-Pok%C3%A9mon_Electric_Type_Icon.svg.png';
