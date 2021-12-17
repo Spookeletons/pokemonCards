@@ -1,6 +1,10 @@
 const {Pokemon} = require('../models')
+
+function getRandomInt(max) {
+    return Math.floor(Math.random * max);
+}
 module.exports.viewAll = async function(req, res, next) {
-        const cards = await Pokemon.findAll();
+        let cards = await Pokemon.findAll();
         for(let i=0;i<cards.length;i++){
             let card = cards[i];
             card.typeEnergy=geturl(card.type);
@@ -14,7 +18,12 @@ module.exports.viewAll = async function(req, res, next) {
             card.resistance=geturl(card.resistance);
             card.retreat=geturl(card.retreat);
         }
-        res.render('index', {cards});
+        let searchRandom = req.query.random || false;
+        if(cards.length > 0 && searchRandom) {
+            let randomIndex = getRandomInt(cards.length);
+            cards = [cards[randomIndex]];
+        }
+        res.render('index', {cards, searchRandom});
 }
 module.exports.renderEditForm = async function(req, res, next){
     const card = await Pokemon.findByPk(

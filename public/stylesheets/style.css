@@ -21,11 +21,35 @@ a {
   box-shadow:0px 4px 8px 0px rgba(50,50,50,0.5);
   margin:40px;
 }
+.button {
+  Display: block;
+  Border-radius: 6px;
+  Padding: 8px 16px;
+  Text-decoration: none;
+  Box-shadow: rgba(0,0,0,0) 0 0 0 0, rgba(0,0,0,0) 0 0 0 0, rgba(0,0,0,0.05) 0 1px 2px 0;
+  Font-size: 14px;
+  Line-height: 1.25rem;
+}
+.button.save {
+  Background: #155E75;
+  Color: white;
+  Border: 1px solid #164E63;
+}
+.add-button-row {
+  Display: flex;
+  Justify-content: flex-start;
+}
+.main-header {
+  Background: #242323;
+  Width: 100%;
+  Display: flex;
+  Justify-content: center;
+}
+
 .top {
   width:360px;
   height:60px;
   display:flex;
-
 }
 .hitpoints {
   color:red;
