@@ -1,7 +1,7 @@
 const {Pokemon} = require('../models')
 
 function getRandomInt(max) {
-    return Math.floor(Math.random * max);
+    return Math.floor(Math.random() * max);
 }
 module.exports.viewAll = async function(req, res, next) {
         let cards = await Pokemon.findAll();
